@@ -1,0 +1,96 @@
+Features:
+
+User Authentication:
+Admin login.
+Cashier login.
+Role-based access to menus and functionalities.
+User credentials stored in users.txt.
+
+
+Product Management (Admin Only):
+Add new products (ID, name, price, stock) to products.txt.
+Duplicate product ID check during addition.
+Restock existing products (update stock in products.txt).
+Delete products from products.txt.
+View a list of all products (ID, name, price, stock).
+
+
+Sales Transactions (Cashier & Admin):
+Process sales of multiple products in one transaction.
+Add products to a virtual cart by ID and quantity.
+Stock level check before adding to the cart.
+Apply percentage-based discount to the total.
+Generate receipt as a text file (with item details, quantity, price, subtotal, discount, total, cash paid, change/due amount).
+Log sales transactions in sales.txt (total, discount, final amount, payment info, voucher ID if applicable).
+
+
+Due Amount Management (Admin & Cashier):
+Record due amounts with a unique voucher ID in vouchers.txt if cash paid is less than the total.
+Clear outstanding due amounts by entering the voucher ID and amount paid.
+Update vouchers.txt upon clearing dues.
+Log due clearing transactions in sales.txt.
+
+
+Input Validation and Error Handling:
+Uses getIntInput for integer inputs with range validation.
+Uses getFloatInput for float inputs with range validation.
+"Cancel" option (entering 0) for many input prompts.
+Basic handling of file opening errors.
+Cancellation:
+
+
+Users can cancel current operations by entering 0.
+File-Based Data Storage:
+Uses users.txt for user credentials.
+Uses products.txt for product information.
+Uses sales.txt for sales logs.
+Uses vouchers.txt for tracking due amounts.
+
+
+Limitations:
+
+Basic File Handling:
+Potential performance issues with large datasets due to sequential read/write operations.
+Risk of data corruption due to lack of built-in data integrity and concurrency control.
+Limited capabilities for complex data querying and reporting.
+
+
+No Database Integration:
+Does not use a dedicated database system for improved performance, reliability, and data management.
+
+
+Limited User Management:
+Basic storage of user credentials in users.txt (potential security risk).
+No in-app functionality to add, update, or delete user accounts.
+
+
+No Advanced Inventory Management:
+Simple stock tracking without features like low stock alerts, supplier management, or inventory history.
+
+Simple Discount Mechanism:
+Only supports percentage discounts on the entire transaction.
+No support for item-specific, promotional, or tiered discounts.
+
+
+Basic Reporting:
+Sales logging likely appends raw data to sales.txt.
+No functionality for generating summarized reports (daily/monthly sales, etc.).
+"View sales" functionality is mentioned but not implemented.
+
+
+Limited Error Handling:
+Basic input validation but could benefit from more robust error handling for file operations and other scenarios.
+
+
+No Graphical User Interface (GUI):
+Command-line interface (CLI) which may not be as user-friendly.
+
+Voucher ID Generation:
+Uses a simple static counter that doesn't persist across program runs and might have uniqueness issues in the long term or with multiple users.
+
+
+No Search Functionality:
+Cannot search for products by name or other attributes; requires knowing the product ID.
+
+Maximum Limits:
+Predefined maximums for the number of products, item name length, and cart items, which can be restrictive.

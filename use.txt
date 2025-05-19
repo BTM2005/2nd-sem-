@@ -1,0 +1,45 @@
+Save the Code: Save the provided C code as a .c file (e.g., pos_system.c).
+
+
+Create User File: In the same directory, create a text file named users.txt.
+
+Add Users: Enter usernames, passwords, and roles (admin or cashier) in users.txt, one user per line (e.g., admin1 adminpass admin).
+
+Create Product File (Optional): You can create a products.txt file with initial product data (ID, name, price, stock per line), or add products through the admin menu later.
+
+Compile the Code: Open your terminal or command prompt and use a C compiler (like GCC) to compile: gcc pos_system.c -o pos_system.
+
+Run the Executable: Execute the compiled program: ./pos_system.
+
+Login: Enter your username and password when prompted.
+
+Admin Menu (if logged in as admin):
+1: Add new products.
+2: Restock existing products.
+3: Delete products.
+4: View product list.
+5: Clear customer due amounts (by voucher ID).
+6: Logout.
+
+
+Cashier Menu (if logged in as cashier):
+1: Start a new checkout process.
+2: View product list.
+3: Clear customer due amounts (by voucher ID).
+4: Logout.
+
+Checkout Process (Cashier & Admin):
+Enter product IDs to add to the cart.
+Enter quantity for each item.
+Enter 0 to finish adding items.
+Enter discount percentage (or 0 for no discount).
+Enter the amount of cash paid by the customer.
+The system will calculate and display the change or due amount. A receipt will be saved to a file.
+
+Clearing Due Amounts: Enter option 5 (admin) or 3 (cashier), then enter the voucher ID and the amount paid.
+
+View Products: Enter option 4 (admin) or 2 (cashier) to see the current product list.
+
+Logout: Choose the logout option from the respective menu.
+
+Login Again/Exit: The system will ask if you want to log in again. Enter y or n. Entering n will exit the program.
